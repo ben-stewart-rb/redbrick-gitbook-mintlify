@@ -68,7 +68,8 @@
         "essentials/reusable-snippets",
         "uploading-data-to-rbai",
         "importing-annotations",
-        "index"
+        "index",
+        "import-cloud-data"
       ]
     },
     {

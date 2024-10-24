@@ -69,7 +69,8 @@
         "uploading-data-to-rbai",
         "importing-annotations",
         "index",
-        "import-cloud-data"
+        "import-cloud-data",
+        "configuring-aws"
       ]
     },
     {

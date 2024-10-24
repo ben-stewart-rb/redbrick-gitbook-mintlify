@@ -65,13 +65,9 @@ First, open a project that will serve as the destination for your upload. Then, 
 
 Upload all instances of a DICOM series to a destination folder. If you’re only uploading a single series, you can do so without designating a folder.
 
-<figure><img src="../.gitbook/assets/Label evaluation (8).png" alt=""><figcaption></figcaption></figure>
-
 ### NIfTI 3D Volume
 
 Individual NIfTI files are uploaded as separate tasks. If you’d like to group your tasks by study, place all of the NIfTI files correlating to a specific task/study in a separate folder.
-
-<figure><img src="../.gitbook/assets/Label evaluation (6).png" alt=""><figcaption></figcaption></figure>
 
 ### Image 2D
 
@@ -84,5 +80,3 @@ Individual 2D videos are uploaded as individual tasks. If you’d like to create
 ### Video Frames
 
 All video frames in a folder are uploaded as a single task and sorted by file name.
-
-<figure><img src="../.gitbook/assets/Label evaluation (5).png" alt=""><figcaption></figcaption></figure>

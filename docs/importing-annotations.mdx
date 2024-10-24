@@ -34,14 +34,15 @@ You can find the [full format reference here](formats/full-format-reference.md#i
 
 ### I: One segmentation file per task
 
-<pre class="language-json" data-line-numbers><code class="lang-json">{
+```json5
+{
     "name": "...", 
     "series": [
         {
             "items": ["instance-01.dcm", "instance-02.dcm", ...],
             "segmentations": "segmentation.nii.gz",
             
-            <a data-footnote-ref href="#user-content-fn-1">// Read more about "segmentMap"</a>
+            // Read more about "segmentMap"
             "segmentMap": {
                 "1": "category-a", 
                 "2": "category-b"
@@ -49,7 +50,7 @@ You can find the [full format reference here](formats/full-format-reference.md#i
         }
     ]
 }
-</code></pre>
+}
 
 ### II: Multiple segmentation files per task
 
@@ -90,17 +91,17 @@ A common pattern is to store each segmentation instance in a separate NIfTI file
         {
             "items": ["instance-01.dcm", "instance-02.dcm", ...],
             
-            <a data-footnote-ref href="#user-content-fn-4">// Read more about "segmentations"</a>
+            // Read more about "segmentations"
             "segmentations": ["path/segmentation-1.nii.gz", "path/segmentation-2.nii.gz"]
             "segmentMap": {
             
-                <a data-footnote-ref href="#user-content-fn-5">// Read more about "1"</a>
+               // Read more about "1"
                 "1": {
                 
-                    <a data-footnote-ref href="#user-content-fn-6">// Read more about "category"</a>
+                    // Read more about "category"
                     "category": "category-a", 
                     
-                    <a data-footnote-ref href="#user-content-fn-7">// Read more about "mask"</a>
+                   // Read more about "mask"
                     "mask": "path/segmentation-1.nii.gz",                 
                 }, 
                 "2": {
@@ -108,7 +109,7 @@ A common pattern is to store each segmentation instance in a separate NIfTI file
                     "mask": "path/segmentation-2.nii.gz"
                 }, 
                 
-                <a data-footnote-ref href="#user-content-fn-8">// Read more about "binaryMask"</a>
+                // Read more about "binaryMask"
                 "binaryMask": true,
             }
         }

@@ -118,20 +118,20 @@ A common pattern is to store each segmentation instance in a separate NIfTI file
 }
 </code></pre>
 
-[^1]: All "1" within segmentation.nii will map to "category-a".
+All "1" within segmentation.nii will map to "category-a".
 
-[^2]: The masks here are not necessarily binary masks, i.e., they might have multiple values within them. \
-    \
+The masks here are not necessarily binary masks, i.e., they might have multiple values within them. 
+    
     The mapping between value and category should be stable across files.&#x20;
 
-[^3]: All "1" within both segmentation files will map to "category-a".
+All "1" within both segmentation files will map to "category-a".
 
-[^4]: For this example, each segmentation file is a binary mask, i.e., all non-zero values in a file will be mapped to a single category.
+For this example, each segmentation file is a binary mask, i.e., all non-zero values in a file will be mapped to a single category.
 
-[^5]: When exported, this segmentation will be represented by "1" in the exported NIfTI.
+When exported, this segmentation will be represented by "1" in the exported NIfTI.
 
-[^6]: This segmentation will be mapped to "category". The "category" must exist in your Project's Taxonomy.
+This segmentation will be mapped to "category". The "category" must exist in your Project's Taxonomy.
 
-[^7]: This mapping will apply to the segmentation file defined by "mask".
+This mapping will apply to the segmentation file defined by "mask".
 
-[^8]: This defines that all segmentation files are binary masks, i.e., all non-zero values represent a single category.&#x20;
+This defines that all segmentation files are binary masks, i.e., all non-zero values represent a single category.&#x20;

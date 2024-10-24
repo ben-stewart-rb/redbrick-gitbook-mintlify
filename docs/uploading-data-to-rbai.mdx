@@ -19,10 +19,6 @@ RedBrick AI supports a variety of different image formats:&#x20;
 * MHA - .mha
 * MHD - .mhd in combination with a corresponding .raw or .img file
 
-{% hint style="success" %}
-You can see the list of supported image export formats [here](https://sdk.redbrickai.com/sdk.html#redbrick.export.Export.export\_tasks).
-{% endhint %}
-
 Annotations on RedBrick are stored and exported in NIfTI format by default. However, RedBrick supports several other formats when uploading and exporting annotations.
 
 ### Supported Annotation Import Formats
@@ -40,17 +36,9 @@ Further information can be found in our SDK reference [here](https://sdk.redbric
 
 Further information can be found in our SDK export reference [here](https://sdk.redbrickai.com/sdk.html#redbrick.export.Export.export\_tasks).
 
-{% hint style="success" %}
-If you require additional support for a file format that is not present in this list, please reach out to us at support@redbrickai.com.&#x20;
-{% endhint %}
-
 ## Direct Upload
 
 The Direct Upload functionality allows users to upload their image data directly to RedBrick AI’s servers. We recommend using Direct Upload if you’re working with a small dataset or want to do some light experimentation with RedBrick’s toolset.
-
-{% hint style="warning" %}
-All image data that is directly uploaded to RedBrick AI’s servers will also be stored there. If you’d rather not have your image data hosted on our servers, we recommend [integrating your storage](import-cloud-data.md).
-{% endhint %}
 
 First, open a project that will serve as the destination for your upload. Then, click on **Upload Data** on the top-right of the dashboard.&#x20;
 

@@ -55,16 +55,13 @@ You can find the [full format reference here](formats/full-format-reference.md#i
 
 Sometimes, segmentations for a single volume are stored in multiple segmentation files, but these segmentation files are not binary masks. In this case, follow the format below.
 
-<pre class="language-json5"><code class="lang-json5">{
+```json5
+{
     "name": "...", 
     "series": [
         {
             "items": ["instance-01.dcm", "instance-02.dcm", ...],
-            
-            <a data-footnote-ref href="#user-content-fn-2">// Read more about "segmentations"</a>
-            "segmentations": ["segmentation-1.nii.gz", "segmentation-2.nii.gz"]
-            
-            <a data-footnote-ref href="#user-content-fn-3">// Read more about "segmentMap"</a>
+            "segmentations": ["segmentation-1.nii.gz", "segmentation-2.nii.gz"],
             "segmentMap": {
                 "1": "category-a", 
                 "2": "category-b"
@@ -72,7 +69,7 @@ Sometimes, segmentations for a single volume are stored in multiple segmentation
         }
     ]
 }
-</code></pre>
+
 
 ### Common mistakes for I and II.&#x20;
 
@@ -86,7 +83,8 @@ Sometimes, segmentations for a single volume are stored in multiple segmentation
 
 A common pattern is to store each segmentation instance in a separate NIfTI file as a binary mask. In the example below, all non-zero values in `segmentation-1.nii.gz` are meant to correspond to the taxonomy category `category-a`.&#x20;
 
-<pre class="language-json"><code class="lang-json">{
+```json5
+{
     "name": "...", 
     "series": [
         {
@@ -116,7 +114,7 @@ A common pattern is to store each segmentation instance in a separate NIfTI file
         }
     ]
 }
-</code></pre>
+}
 
 All "1" within segmentation.nii will map to "category-a".
 

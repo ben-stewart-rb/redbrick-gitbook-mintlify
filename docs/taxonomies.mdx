@@ -8,11 +8,11 @@ Object Labels are the structures that your team will annotate on RedBrick AI.&#x
 
 When creating your Taxonomy, you must define a Label **Type** (e.g. "Segmentation") and a **Name** (e.g. "Edema") for each Object Label.
 
-RedBrick AI supports the following Object Label Types:&#x20;
+RedBrick AI supports the following Object Label Types;
 
 ### Object Label Attributes
 
-Attributes allow you to add a deeper level of classification to your Object Labels. Attributes are commonly used to collect more information about a particular object (e.g. "True/False" for an Object titled "tumor malignancy"). RedBrick AI offers the following Attribute Types:&#x20;
+Attributes allow you to add a deeper level of classification to your Object Labels. Attributes are commonly used to collect more information about a particular object (e.g. "True/False" for an Object titled "tumor malignancy"). RedBrick AI offers the following Attribute Types;
 
 ### Classifications
 
@@ -26,13 +26,11 @@ _**Series-Level Classifications**_ are applied to a single series (e.g. the T1 s
 
 _**Instance-Level Classifications**_ are applied to a single frame of a video and are only available for 2D video formats.
 
-<table><thead><tr><th width="238">Classification Type</th><th width="168">2D Image</th><th width="169">3D Image</th><th>2D Video</th></tr></thead><tbody><tr><td>Study</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>Series</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>Instance</td><td></td><td></td><td>✅</td></tr></tbody></table>
-
 ## Creating Taxonomies
 
-Taxonomies are created and stored at the Organization level, which allows you to use a single Taxonomy for several Projects_._ &#x20;
+Taxonomies are created and stored at the Organization level, which allows you to use a single Taxonomy for several Projects;
 
-To create a new Taxonomy in the UI, navigate to the **Taxonomies** page in the left hand side bar of the RedBrick web app and click on **Create Taxonomy**.&#x20;
+To create a new Taxonomy in the UI, navigate to the **Taxonomies** page in the left hand side bar of the RedBrick web app and click on **Create Taxonomy**;
 
 Taxonomies can also be created using the [`create_taxonomy()` SDK method](https://redbrick-sdk.readthedocs.io/en/stable/sdk.html#redbrick.organization.RBOrganization.create\_taxonomy).
 
@@ -59,7 +57,7 @@ You'll then be directed to provide a name for the newly duplicated Taxonomy. Inp
 
 <figure><img src="../../.gitbook/assets/copying-taxonomies.gif" alt=""><figcaption><p>Walkthrough of Taxonomy duplication</p></figcaption></figure>
 
-**SDK Mastery:** when duplicating a Taxonomy, the archived elements of the Source Taxonomy are not transferred to the Duplicate Taxonomy.&#x20;
+**SDK Mastery:** when duplicating a Taxonomy, the archived elements of the Source Taxonomy are not transferred to the Duplicate Taxonomy.;
 
 Be sure to validate your [objectTypes](https://sdk.redbrickai.com/formats/taxonomy.html#redbrick.types.taxonomy.ObjectType) in the Duplicate Taxonomy, as values may have changed!
 
@@ -162,7 +160,5 @@ object_types=
 All HTML elements can be included within the `hint: string` attribute, but images must be inserted using `<img src>` and a relevant link.
 
 The above code displays as follows in the Annotation Tool:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2023-05-23 at 12.32.17.png" alt=""><figcaption><p>The HTML Tooltip that appears while hovering your cursor over the "?" icon</p></figcaption></figure>
 
 For security reasons, we do not allow scripts to be executed within HTML Tooltips.

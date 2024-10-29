@@ -68,7 +68,8 @@
         "import-cloud-data",
         "configuring-aws",
         "organizations",
-        "cli"
+        "cli",
+        "hanging-protocol"
       ]
     },
     {

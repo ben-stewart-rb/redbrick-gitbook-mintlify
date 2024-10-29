@@ -71,7 +71,8 @@
         "index",
         "import-cloud-data",
         "configuring-aws",
-        "organizations"
+        "organizations",
+        "cli"
       ]
     },
     {

@@ -58,14 +58,8 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "STUFF BEN UPLOADED TO MINTLIFY",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets",
         "uploading-data-to-rbai",
         "importing-annotations",
         "annotation-format",

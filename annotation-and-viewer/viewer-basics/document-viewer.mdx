@@ -1,0 +1,41 @@
+---
+title: "Document Viewer"
+description: "As of v1.1.4, RedBrick AI allows users to upload text reports to Tasks."
+---
+
+For purposes of data I/O, viewing, and navigation, each document is treated as a Series and occupies its own viewport.
+
+<Frame caption="An example text report alongside a CT scan">
+  <img src="/images/annotation-and-viewer/viewer-basics/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MKt1BePyOQuVTnMGssE%252Fuploads%252F76vAsdP2dYpP8KMsWVQj%252FCleanShot%25202024-09-24%2520at%252016.29.09%25402x.png" />
+</Frame>
+
+## Uploading Documents to RedBrick AI
+
+All documents must be uploaded programmatically and must be `.txt` files.
+
+Please see the following JSON as an example:
+
+```
+// example Items List
+
+[
+  {
+    "name": "Task Name",
+    "series": [
+      {
+        "name": "Series Name"
+        "items": [
+          "file/path/to/images/1.2.156.14702.dcm",
+        ]
+      },
+      {
+        "items": [
+          "file/path/to/report.txt"
+        ]
+      }
+    ]
+  }
+]
+```
+
+[PreviousViewer Basics](/annotation-and-viewer/viewer-basics)[NextMultiple Modalities](/annotation-and-viewer/viewer-basics/multiple-modalities)

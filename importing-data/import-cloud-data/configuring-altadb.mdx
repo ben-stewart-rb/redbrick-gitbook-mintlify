@@ -1,0 +1,60 @@
+---
+title: "Configuring AltaDB"
+description: "This section covers how to prepare your AltaDB storage to import data into the RedBrick AI platform. After following the instructions in this section, you will be able to create an AltaDB 'storage method' and import Data into RedBrick AI."
+---
+
+### Signing up on AltaDB Platform
+
+The first step is to [create an account](https://docs.altadb.com/altadb) on AltaDB.
+
+### Dataset Creation & Importing Data
+
+1. Create a dataset.
+
+2. Click on Import data, and drag & drop your DICOM files into the data importer. **AltaDB v0.0 only supports direct upload through the browser**.
+
+3. Once the upload is complete, AltaDB will index the DICOM headers and re-compress the DICOM pixel data with state-of-the-art compression. This process will take a few minutes for 10 series.
+
+4. You can [monitor the status of your imports](https://share.redbrickai.com/PTBs1H5P) inside the "Import" tab.
+
+<Info>
+  Processing an import will take several minutes to completely index all DICOM headers and re-compress pixel data with state-of-the-art compression
+</Info>
+
+### Viewing the Data
+
+You can preview your images by clicking on the thumbnail. The simple viewer offers a view of the imaging axis and supports a few key functions:
+
+1. Change slice: Mouse scroll.
+
+2. Windowing: Right-click drag.
+
+3. Zoom: Left-click drag.
+
+4. Pan: Middle mouse drag.
+
+## Integrating with RedBrick AI
+
+### Create API key on AltaDB
+
+To Create a new API key, Go to API keys in the left menu sidebar and click on "New API key" button on the top right corner. Once created, note down the "access" and "secret" keys.
+
+![](/images/importing-data/import-cloud-data/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MKt1BePyOQuVTnMGssE%252Fuploads%252FZgtmEGijeZJJ4MoAGYwA%252Fimage%2520%288%29.png)
+
+### Download the JSON from AltaDB
+
+In your AltaDB dataset, select the series you want to import into RedBrick AI and click on the "Download RedBrick AI JSON button".
+
+### Create AltaDB storage method on RedBrick AI
+
+Next step is to create an AltaDB storage method in your RedBrick AI account. You will need your AltaDB Access and Secret keys to setup this storage method.
+
+![](/images/importing-data/import-cloud-data/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MKt1BePyOQuVTnMGssE%252Fuploads%252FBpwtDrwwAK3RzcihsLhx%252FScreenshot%25202024-06-05%2520at%25205.29.37%25E2%2580%25AFPM.png)
+
+### Importing Data into RedBrick AI
+
+To import data into RedBrick AI, Upload the JSON file you downloaded from AltaDB and Select AltaDB from the dropdown in the external storage method.
+
+![](/images/importing-data/import-cloud-data/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MKt1BePyOQuVTnMGssE%252Fuploads%252F9KjQjz1UovAqmVl3x8iQ%252Fimage.webp)
+
+[PreviousConfiguring GCS](/importing-data/import-cloud-data/configuring-gcs)[NextCreating an Items List](/importing-data/import-cloud-data/creating-an-items-list)

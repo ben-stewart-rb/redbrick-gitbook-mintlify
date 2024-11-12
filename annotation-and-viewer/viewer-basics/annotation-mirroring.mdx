@@ -1,0 +1,26 @@
+---
+title: "Annotation Mirroring"
+description: "It is common to have multiple series that show the same anatomy with different scanner directions or scanner settings."
+---
+
+The segmentation mirroring feature allows you to "mirror" the segmentations from a single volume onto another volume. This allows you to compare and contrast information from different scans to modify the same segmentation file.
+
+<Frame caption="Segmentation mirroring demonstration" />
+
+### Activating and using
+
+To activate, load up a task with more than one 3D series, and select "Mirror labels to all volumes." This option will not be available if your task only has a single series.
+
+<Frame caption="Activating label mirroring">
+  <img src="/images/annotation-and-viewer/viewer-basics/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MKt1BePyOQuVTnMGssE%252Fuploads%252FGAwgjzD0WcvZfkkt4CXb%252Fimage.png" />
+</Frame>
+
+Once activated, you can now edit any segmentation labels from the series that you are mirroring in the same way as any other segmentation label.
+
+### Notes, warnings, and limitations
+
+* This feature will only be effective if your data is properly registered. We use the header information of your DICOM and NIfTI files to align the data in three dimensions. If your series are not properly aligned, the mirroring will also be incorrectly aligned.
+
+* While using label mirroring, 2D tools will not be available, only 3D variants.
+
+[PreviousIntellisync](/annotation-and-viewer/viewer-basics/intellisync)[NextCreating, Editing and Deleting Annotations](/annotation-and-viewer/creating-editing-and-deleting-annotations)

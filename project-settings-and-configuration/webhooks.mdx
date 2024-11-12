@@ -1,0 +1,85 @@
+---
+title: "Webhooks"
+description: "Webhooks allow you to receive an HTTP push notification triggered by certain events within a project. Currently, webhooks are triggered by the following events:"
+---
+
+1. **Task created**: When a data point is uploaded, and a task is created from that data point.
+
+2. **Task entered stage**: When a task enters a new stage in the labeling workflow.
+
+3. **Task deleted**: When a task is deleted.
+
+<CodeGroup>
+  ```task-created Task created
+  {
+    "version": "v1.0",
+    "events": 1,
+    "payload": [
+      {
+        "event": "TASK_CREATED",
+        "id": "...",
+        "timestamp": ...,
+        "data": {
+          "orgId": "...",
+          "projectId": "...",
+          "taskId": "...",
+          "taskName": "...",
+          "updatedBy": "..."
+        }
+      }
+    ]
+  }
+  ```
+
+  ```task-entered-stage Task entered stage
+  {
+    "version": "v1.0",
+    "events": 1,
+    "payload": [
+      {
+        "event": "TASK_ENTERED_STAGE",
+        "id": "...",
+        "timestamp": ...,
+        "data": {
+          "orgId": "...",
+          "projectId": "...",
+          "taskId": "...",
+          "stageName": "...",
+          "updatedBy": "..."
+        }
+      }
+    ]
+  }
+  ```
+
+  ```task-deleted Task deleted
+  {
+    "version": "v1.0",
+    "events": 1,
+    "payload": [
+      {
+        "event": "TASK_DELETED",
+        "id": "...",
+        "timestamp": ...,
+        "data": {
+          "orgId": "...",
+          "projectId": "...",
+          "taskId": "...",
+          "taskName": "...",
+          "updatedBy": "..."
+        }
+      }
+    ]
+  }
+  ```
+</CodeGroup>
+
+## Using webhooks
+
+Configure webhook from project settings, as shown in the image below.
+
+![](/images/project-settings-and-configuration/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MKt1BePyOQuVTnMGssE%252Fuploads%252FR5B593ZgHd6Q5WUREEVs%252FRedBrick%2520AI%25202024-04-22%2520at%252011.05.15%25402x.png)
+
+You can use tools like [https://webhook.site/](https://webhook.site/#!/view/8df76e5a-9a58-4394-8c65-854d305bb5be) to test the webhook and inspect the response format.
+
+[PreviousLabeler Evaluation](/project-settings-and-configuration/labeler-evaluation)[NextViewer Basics](/annotation-and-viewer/viewer-basics)

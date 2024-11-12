@@ -1,0 +1,39 @@
+---
+title: "Overview"
+description: "The RedBrick AI Command Line Interface is a package that allows developers to interact with the RedBrick AI application programmatically."
+---
+
+We recommend you use the CLI for most regular import & export actions. If you want to write Python scripts to perform these actions, or you are interested in more advanced scripting, [please use our Python SDK](/python-sdk/sdk-overview).
+
+This documentation covers high-level guides and usecases. If you are interested in more detailed documentation of the CLI interface, please [visit the full CLI reference documentation](https://redbrick-sdk.readthedocs.io/en/stable/cli.html).
+
+## Configure your CLI credentials
+
+Once you have [installed the CLI](/python-sdk/installation-and-api-keys), you need to configure your credentials.
+
+```
+$ redbrick config
+> Org ID: ...
+> API KEY: ...
+> URL: https://api.redbrickai.com
+> Profile name: ...
+✔ RedBrick AI Organization
+```
+
+<Info>
+  The URL should default to [https://api.redbrickai.com](https://api.redbrickai.com). If you are using a private/single-tenant deployment of RedBrick AI, this will need to be changed for your deployment - reach out to us for confirmation on what the URL needs to be.
+</Info>
+
+For most scenarios, you will only need a single credentials profile. However, if you want to create multiple profiles (perhaps for different organizations), you can do it in the following way:
+
+```
+$ redbrick config add
+```
+
+To change your profile:
+
+```
+$ redbrick config set
+```
+
+[PreviousExporting Annotations](/python-sdk/sdk-overview/exporting-annotations)[NextCreating & Cloning Projects](/python-sdk/cli-overview/creating-and-cloning-projects)

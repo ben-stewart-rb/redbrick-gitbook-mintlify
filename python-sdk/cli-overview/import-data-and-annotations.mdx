@@ -1,0 +1,84 @@
+---
+title: "Import Data & Annotations"
+description: "You can easily import large amounts of data from the command line interface. Before following this guide, make sure to ."
+---
+
+## Importing locally stored images
+
+### Upload using an items file
+
+To upload images that are stored in a non-conventional folder structure, you can define the structure using an [items](/importing-data/import-cloud-data/creating-an-items-list) JSON file and upload it like this.
+
+```
+$ redbrick upload path/to/items.json
+```
+
+***
+
+If you don't want to use an items file for upload, ensure your data is stored within the correct folder structure [defined in our documentation](/importing-data/uploading-data-to-redbrick). You can only upload a single data type in one upload operation. See the [supported file types here](/importing-data/uploading-data-to-redbrick).
+
+```
+$ redbrick upload path/to/data/ --type DICOM3D
+```
+
+You can see all available [types in the CLI upload reference documentation](https://redbrick-sdk.readthedocs.io/en/stable/cli.html#Positional%20Arguments_repeat8).
+
+### Group images by study
+
+To group your images by study, see [here for examples](/importing-data/uploading-data-to-redbrick), input the following:
+
+```
+$ redbrick upload path/to/data/ --as-study
+```
+
+### Upload video frames
+
+To upload a [video by uploading individual frames](/importing-data/uploading-data-to-redbrick#video-frames), input the following:
+
+```
+$ redbrick upload path/to/videoframes/ --as-frames --type VIDEOFRAMES
+```
+
+## Importing externally stored images
+
+To import data that is stored externally (e.g., in an AWS s3 bucket), you must specify the storage ID. You can find your storage solution's unique Storage ID in the *Storage tab* of the RedBrick AI platform.
+
+<Frame caption="Click on the field in order to copy the value to your clipboard.">
+  <img src="/images/python-sdk/cli-overview/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MKt1BePyOQuVTnMGssE%252Fuploads%252FS7DJsI0mn9aWjsXKGUk8%252FCleanShot%25202023-12-27%2520at%252015.15.27%25402x.png" />
+</Frame>
+
+Prepare an [Items List](/importing-data/import-cloud-data#items-list) containing references to your externally stored files.
+
+```
+$ redbrick upload items.json --storage STORAGEID # replace STORAGEID with your Storage ID
+```
+
+## Import annotations
+
+To import annotations with your data, you must first create an items JSON file [following the import annotations guide](/python-sdk/importing-annotations-guide).
+
+[Importing Annotations Guide](/python-sdk/importing-annotations-guide)
+
+### Import locally stored annotations & images
+
+```
+$ redbrick upload path/to/items.json # items.json must have local file paths.
+```
+
+### Import locally stored annotations with externally stored images
+
+The following command will upload your (locally stored) annotation files and your image files (stored in `STORAGEID`):
+
+```
+$ redbrick upload path/to/items.json --storage STORAGEID
+```
+
+### Import externally stored annotations & images
+
+If your annotation files are also stored externally, you can run the following command:
+
+```
+$ redbrick upload path/to/items.json --storage STORAGEID --label-storage LABELSTORAGEID
+```
+
+[PreviousCreating & Cloning Projects](/python-sdk/cli-overview/creating-and-cloning-projects)[NextExporting Annotations](/python-sdk/cli-overview/exporting-annotations)

@@ -1,0 +1,63 @@
+---
+title: "Creating & Cloning Projects"
+description: "Almost all CLI operations need to be performed within a  directory. A local project directory can be created by cloning a RedBrick AI project, or by creating a new project using the CLI."
+---
+
+## Creating a new project
+
+To create a new project, first navigate to an empty directory. We recommend *creating a new* directory, and naming it after your new project.
+
+```
+$ mkdir my-new-project
+$ cd my-new-project
+```
+
+Now to create a new project, simply run:
+
+```
+$ redbrick init
+> Name: my-new-project
+> Taxonomy: my-taxonomy-name
+> Reviews: 1
+```
+
+You can now verify your current directory is a *local project directory* by doing:
+
+```
+$ redbrick info
+                 Organization                  
+╭──────┬──────────────────────────────────────╮
+│ ID   │               ...                    │
+│ Name │ My Organization                      │
+╰──────┴──────────────────────────────────────╯
+                                    Project                                     
+╭──────────┬───────────────────────────────────────────────────────────────────╮
+│ ID       │ ...                                                               │
+│ Name     │ my-new-project                                                    │
+│ Taxonomy │ my-taxonomy-name                                                  │
+│ URL      │ https://app.redbrickai.com/.../projects/.../                      │
+╰──────────┴───────────────────────────────────────────────────────────────────╯
+```
+
+## Clone an existing project
+
+You can clone an existing project that you (or someone else) created.
+
+```
+$ redbrick clone 
+> Project: 
+❯ 3/3
+❯ my-new-project (...)
+  my-first-project (...)
+  my-old-project (...)
+```
+
+You can directly clone a project using it's project ID.
+
+```
+$ redbrick clone PROJECTID # replace PROJECTID with your project's ID
+```
+
+The project will now be cloned **in a directory named after your project** (within your current working directory).
+
+[PreviousCLI Overview](/python-sdk/cli-overview)[NextImport Data & Annotations](/python-sdk/cli-overview/import-data-and-annotations)

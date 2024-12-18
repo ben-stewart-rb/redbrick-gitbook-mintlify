@@ -11,7 +11,7 @@
     "dark": "#0D9373"
   },
   "favicon": "/~/files/v0/b/gitbook-legacy-files/o/spaces/-MKt1BePyOQuVTnMGssE/avatar-1615358179613.png",
-  "feedback": {"thumbsRating": true},
+  "feedback": {"thumbsRating": true, "suggestEdit": true},
   "navigation": [
     {
       "group": "Home",
